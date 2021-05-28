@@ -4,7 +4,7 @@ Application of a network propagation algorythm based on heat diffusion.
 
 The implementation of the algorythm is the same of the [_Diffusion_ plugin for Cytoscape](http://apps.cytoscape.org/apps/diffusion). Functions for calculating the heat propagation are taken from [the code](https://github.com/idekerlab/heat-diffusion/blob/master/heat_diffusion_service.py) that runs behind that plugin.
 
-Network files used as input must have an edge-list format (two columns of interacting nodes). Heat values should be input in a separate TSV file indicating the node and their corresponding heat value. The output is a list of the nodes of the network and their heat values after propagation. See _Usage_ section for more information.
+Network files used as input must have an edge-list format (two columns of interacting nodes). Heat values should be input in a separate TSV file indicating the node and their corresponding heat value. The output is a list of the nodes of the network and their heat values after propagation. The results of the propagation will depend on the topology of the network, the initial heat of the nodes and the time value (default: _0.1_) set for the propagation. See _**Usage**_ section for more information.
 
 ## Requirements
 
@@ -17,7 +17,7 @@ The number indicate the version used for running the examples in the _Usage_ sec
 
 ## Usage
 
-The minimum input are two files: one with the interacting nodes of a network and another with the nodes and their initial heat.
+The script expects at least two files: one with the interacting nodes of a network and another with the nodes and their initial heat.
                              
 `python3 heat_diffusion.py network_edges heated_nodes`
  
